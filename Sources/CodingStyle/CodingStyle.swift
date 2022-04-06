@@ -11,7 +11,7 @@ public struct CodingStyle {
     public private(set) var text: String
     private var currentCodingCase: CodingCase
 
-    init(wrappedValue: String, _ codingCase: CodingCase) {
+    public init(wrappedValue: String, _ codingCase: CodingCase) {
         text = wrappedValue
         currentCodingCase = codingCase
     }
