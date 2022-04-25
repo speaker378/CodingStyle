@@ -1,11 +1,5 @@
 import Foundation
 
-public enum CodingCase {
-    case camelCase
-    case snakeCase
-    case kebabCase
-}
-
 @propertyWrapper
 public struct CodingStyle {
     public private(set) var text: String
@@ -58,5 +52,11 @@ public struct CodingStyle {
         return text
             .replacingOccurrences(of: " ", with: "-")
             .replacingOccurrences(of: "_", with: "-")
+    }
+    
+    public enum CodingCase {
+        case camelCase
+        case snakeCase
+        case kebabCase
     }
 }
